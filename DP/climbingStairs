@@ -1,0 +1,18 @@
+def climbStairs(self, n: int) -> int:
+        '''
+        you can solve this problem using the fibonacci sequence,
+        starting from the end of the end
+
+        example n = 5
+        returns 8
+        array = {8,5,3,2,1,1}
+        '''
+
+        one, two = 1, 1
+
+        for i in range(n-1):
+            temp = one
+            one = one + two
+            two = temp
+
+        return one
